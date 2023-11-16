@@ -1,6 +1,12 @@
 const app = Vue.createApp({
-    data: () => ({
-      message: 'Hello Vue.js'
-    })
-  })
-  app.mount('#app')
+  data: () => ({
+    message: ''
+  }),
+  methods: {
+    clickHandler: function ($event, message) {
+      this.message = message
+      console.log($event)
+    }
+  }
+})
+app.mount('#app')
